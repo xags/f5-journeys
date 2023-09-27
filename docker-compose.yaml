@@ -4,7 +4,7 @@ services:
     image: f5devcentral/f5-automation-config-converter:1.23.0
     environment:
       - ACC_API_PORT=${ACC_API_PORT}
-    restart: unless-stopped
+    restart: on-failure
     command: serve
     tmpfs: /tmp
 
